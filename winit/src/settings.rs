@@ -92,7 +92,7 @@ impl Window {
 
         #[cfg(target_family = "unix")]
         {
-            use::winit::platform::unix::WindowBuilderExtUnix;
+            use ::winit::platform::unix::WindowBuilderExtUnix;
             window_builder = window_builder.with_app_id(title.to_string());
         }
 
