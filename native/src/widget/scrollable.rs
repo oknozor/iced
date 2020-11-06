@@ -151,6 +151,17 @@ impl<'a, Message, Renderer: self::Renderer> Scrollable<'a, Message, Renderer> {
             ));
         }
     }
+
+    /// Set the [`Scrollable`] content all at once.
+    ///
+    /// [`Scrollable`]: struct.Scrollable.html
+    pub fn with_content(
+        mut self,
+        content: Column<'a, Message, Renderer>,
+    ) -> Self {
+        self.content = content;
+        self
+    }
 }
 
 impl<'a, Message, Renderer> Widget<Message, Renderer>
